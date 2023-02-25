@@ -11,7 +11,7 @@ public class ProductDto {
 	private @NotNull double price;
 	private @NotNull String description;
 	private @NotNull Integer categoryId;
-	
+
 	public ProductDto(@NotNull String name, @NotNull String imageUrl, @NotNull double price,
 			@NotNull String description, @NotNull Integer categoryId) {
 		this.name = name;
@@ -20,7 +20,7 @@ public class ProductDto {
 		this.description = description;
 		this.categoryId = categoryId;
 	}
-	
+
 	public ProductDto(Product product) {
 		this.setId(product.getId());
 		this.setName(product.getName());
@@ -29,9 +29,9 @@ public class ProductDto {
 		this.setPrice(product.getPrice());
 		this.setCategoryId(product.getCategory().getId());
 	}
-	
+
 	public ProductDto() {
-		
+
 	}
 
 	public Integer getId() {
@@ -81,32 +81,5 @@ public class ProductDto {
 	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
-	
-	
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

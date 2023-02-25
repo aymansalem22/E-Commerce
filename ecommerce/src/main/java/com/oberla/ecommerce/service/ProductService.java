@@ -16,18 +16,18 @@ import com.oberla.ecommerce.repository.ProductRepository;
 
 @Service
 public class ProductService {
-	
+
 	@Autowired
 	private ProductRepository productRepository;
 
-	public  void addProduct(ProductDto productDto, Category category) {
-		Product product=getProductFromDto(productDto, category);
+	public void addProduct(ProductDto productDto, Category category) {
+		Product product = getProductFromDto(productDto, category);
 		productRepository.save(product);
-		
+
 	}
-	
-	public static Product getProductFromDto(ProductDto productDto,Category category) {
-		Product product=new Product();
+
+	public static Product getProductFromDto(ProductDto productDto, Category category) {
+		Product product = new Product();
 		product.setCategory(category);
 		product.setDescription(productDto.getDescription());
 		product.setImageURL(productDto.getImageUrl());
@@ -37,10 +37,10 @@ public class ProductService {
 	}
 
 	public List<ProductDto> listproducts() {
-		List<Product> products=productRepository.findAll();
-		List<ProductDto> productDtos=new ArrayList<>();
-		
-		for(Product product:products){
+		List<Product> products = productRepository.findAll();
+		List<ProductDto> productDtos = new ArrayList<>();
+
+		for (Product product : products) {
 			productDtos.add(new ProductDto(product));
 		}
 		return productDtos;
@@ -50,44 +50,10 @@ public class ProductService {
 		return productRepository.findById(productID);
 	}
 
-	public void updateProduct(Integer productID, @Valid ProductDto productDto,Category category) {
-		Product product=getProductFromDto(productDto, category);
+	public void updateProduct(Integer productID, @Valid ProductDto productDto, Category category) {
+		Product product = getProductFromDto(productDto, category);
 		product.setId(productID);
 		productRepository.save(product);
 	}
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

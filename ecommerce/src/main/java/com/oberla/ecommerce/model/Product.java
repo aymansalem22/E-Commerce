@@ -12,27 +12,25 @@ import javax.validation.constraints.NotNull;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
-@Table(name= "products")
+@Table(name = "products")
 public class Product {
-	
+
 	@Id
 	@GeneratedValue
 	private Integer id;
-	
+
 	private @NotNull String name;
 	private @NotNull String imageURL;
 	private @NotNull double price;
 	private @NotNull String description;
-	
+
 	@JsonIgnore
-	@ManyToOne(fetch=FetchType.LAZY,optional=false)
-	@JoinColumn(name="category_id",nullable=false)
+	@ManyToOne(fetch = FetchType.LAZY, optional = false)
+	@JoinColumn(name = "category_id", nullable = false)
 	Category category;
-	
-	
 
 	public Product() {
-		
+
 	}
 
 	public Product(@NotNull String name, @NotNull String imageURL, @NotNull double price, @NotNull String description,
@@ -92,49 +90,5 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
-	
-	
-	
-	
-	
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
