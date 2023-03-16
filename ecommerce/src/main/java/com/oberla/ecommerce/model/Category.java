@@ -71,7 +71,10 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", categoryName=" + categoryName + ", description=" + description + "]";
+		return "Category [id=" + id + ", categoryName=" + categoryName + ", description=" + description + ", imageUrl="
+				+ imageUrl + "]";
 	}
+
+	
 
 }

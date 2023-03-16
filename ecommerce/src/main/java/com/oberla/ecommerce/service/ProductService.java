@@ -30,7 +30,7 @@ public class ProductService {
 		Product product = new Product();
 		product.setCategory(category);
 		product.setDescription(productDto.getDescription());
-		product.setImageURL(productDto.getImageUrl());
+		product.setImageUrl(productDto.getImageUrl());
 		product.setPrice(productDto.getPrice());
 		product.setName(productDto.getName());
 		return product;

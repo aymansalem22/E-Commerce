@@ -24,7 +24,7 @@ public class ProductDto {
 	public ProductDto(Product product) {
 		this.setId(product.getId());
 		this.setName(product.getName());
-		this.setImageUrl(product.getImageURL());
+		this.setImageUrl(product.getImageUrl());
 		this.setDescription(product.getDescription());
 		this.setPrice(product.getPrice());
 		this.setCategoryId(product.getCategory().getId());
@@ -49,6 +49,8 @@ public class ProductDto {
 	public void setName(String name) {
 		this.name = name;
 	}
+
+
 
 	public String getImageUrl() {
 		return imageUrl;

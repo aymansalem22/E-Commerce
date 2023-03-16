@@ -20,7 +20,7 @@ public class Product {
 	private Integer id;
 
 	private @NotNull String name;
-	private @NotNull String imageURL;
+	private @NotNull String imageUrl;
 	private @NotNull double price;
 	private @NotNull String description;
 
@@ -37,7 +37,7 @@ public class Product {
 			Category category) {
 		super();
 		this.name = name;
-		this.imageURL = imageURL;
+		this.imageUrl = imageURL;
 		this.price = price;
 		this.description = description;
 		this.category = category;
@@ -59,12 +59,14 @@ public class Product {
 		this.name = name;
 	}
 
-	public String getImageURL() {
-		return imageURL;
+	
+
+	public String getImageUrl() {
+		return imageUrl;
 	}
 
-	public void setImageURL(String imageURL) {
-		this.imageURL = imageURL;
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
 	}
 
 	public double getPrice() {
