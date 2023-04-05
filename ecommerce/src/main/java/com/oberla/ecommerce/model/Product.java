@@ -59,8 +59,6 @@ public class Product {
 		this.name = name;
 	}
 
-	
-
 	public String getImageUrl() {
 		return imageUrl;
 	}

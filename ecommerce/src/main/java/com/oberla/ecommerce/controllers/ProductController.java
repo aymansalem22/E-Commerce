@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.oberla.ecommerce.common.ApiResponse;
-import com.oberla.ecommerce.dto.ProductDto;
+import com.oberla.ecommerce.dto.product.ProductDto;
 import com.oberla.ecommerce.model.Category;
 import com.oberla.ecommerce.service.CategoryService;
 import com.oberla.ecommerce.service.ProductService;

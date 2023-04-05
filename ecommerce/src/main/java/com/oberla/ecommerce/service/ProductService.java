@@ -9,7 +9,7 @@ import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.oberla.ecommerce.dto.ProductDto;
+import com.oberla.ecommerce.dto.product.ProductDto;
 import com.oberla.ecommerce.model.Category;
 import com.oberla.ecommerce.model.Product;
 import com.oberla.ecommerce.repository.ProductRepository;

@@ -1,4 +1,4 @@
-package com.oberla.ecommerce.dto;
+package com.oberla.ecommerce.dto.product;
 
 import javax.validation.constraints.NotNull;
 
@@ -49,8 +49,6 @@ public class ProductDto {
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
 
 	public String getImageUrl() {
 		return imageUrl;
