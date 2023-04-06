@@ -13,4 +13,14 @@ public class ExceptionControllerAdvice {
 		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
 	}
 
+	@ExceptionHandler(value = ProductNotExistException.class)
+	public final ResponseEntity<String> handleUpdateeFailException(ProductNotExistException exception) {
+		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+	}
+
+	@ExceptionHandler(value = CartItemNotExistException.class)
+	public final ResponseEntity<String> handleUpdateeFailException(CartItemNotExistException exception) {
+		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+	}
+
 }
