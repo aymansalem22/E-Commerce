@@ -35,7 +35,7 @@ public class Product {
 
 	public Product(@NotNull String name, @NotNull String imageURL, @NotNull double price, @NotNull String description,
 			Category category) {
-		super();
+
 		this.name = name;
 		this.imageUrl = imageURL;
 		this.price = price;
