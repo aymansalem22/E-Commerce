@@ -23,4 +23,14 @@ public class ExceptionControllerAdvice {
 		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
 	}
 
+	@ExceptionHandler(value = OrderNotFoundException.class)
+	public final ResponseEntity<String> handleUpdateeFailException(OrderNotFoundException exception) {
+		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+	}
+
+	@ExceptionHandler(value = AuthenticationFailException.class)
+	public final ResponseEntity<String> handleUpdateeFailException(AuthenticationFailException exception) {
+		return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+	}
+
 }

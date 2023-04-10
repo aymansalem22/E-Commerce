@@ -13,4 +13,6 @@ import com.oberla.ecommerce.model.User;
 public interface CartRepository extends JpaRepository<Cart, Integer> {
 	List<Cart> findAllByUserOrderByCreatedDateDesc(User user);
 
+	void deleteByUser(User user);
+
 }
