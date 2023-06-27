@@ -3,6 +3,7 @@ package com.oberla.ecommerce.model;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
@@ -16,7 +17,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 public class Product {
 
 	@Id
-	@GeneratedValue
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
 
 	private @NotNull String name;
@@ -90,5 +91,13 @@ public class Product {
 	public void setCategory(Category category) {
 		this.category = category;
 	}
+
+	@Override
+	public String toString() {
+		return "Product [name=" + name + ", imageUrl=" + imageUrl + ", price=" + price + ", description=" + description
+				+ ", category=" + category + "]";
+	}
+	
+	
 
 }
